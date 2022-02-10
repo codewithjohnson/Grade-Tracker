@@ -25,8 +25,8 @@ document.querySelector("#btn").addEventListener("click", (e) => {
 
     TableRow.innerHTML = `
         <td scope="col" class="text-center">${NameInput}</td>
-        <td scope="col" class="text-center">${PhysicsInput}</td>
-        <td scope="col" class="text-center">${ChemistryInput}</td>
+        <td scope="col" class="text-center">${PhysicsInput} %</td>
+        <td scope="col" class="text-center">${ChemistryInput} %</td>
         <td scope="col" class="text-center text-decoration-none text-danger"><a href="#delete"><img src="./images/de.png" alt=""></a></td>
     `;
     // APPEND ROW TO TABLE
@@ -40,7 +40,7 @@ document.querySelector("#btn").addEventListener("click", (e) => {
     document.getElementById("physics").value = "";
     document.getElementById("chemistry").value = "";
 
-    
+
 });
 
 
