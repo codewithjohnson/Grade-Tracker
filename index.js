@@ -29,10 +29,10 @@ function DisplayGradesToTable(data){
     let TableRow = document.createElement("tr");
 
     TableRow.innerHTML = `
-            <td>#</td>
             <td scope="col" class="text-center">${data.Name}</td>
             <td scope="col" class="text-center">${data.PhysicsGrade}</td>
             <td scope="col" class="text-center">${data.ChemistryGrade}</td>
+            <td scope="col" class="text-center text-decoration-none text-danger"><a href="#delete"><img src="./images/de.png" alt=""></a></td>
             
         `;
     TableBody.appendChild(TableRow);
