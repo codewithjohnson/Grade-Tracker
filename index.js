@@ -39,6 +39,8 @@ document.querySelector("#btn").addEventListener("click", (e) => {
     document.getElementById("fullname").value = "";
     document.getElementById("physics").value = "";
     document.getElementById("chemistry").value = "";
+
+    
 });
 
 
