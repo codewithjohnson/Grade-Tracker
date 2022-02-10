@@ -1,4 +1,4 @@
-// Initialized Graded data
+// Sample Data that will be used anytime page loads
 const SampleGradeInfo = [{
         Name: "Boko Isaac",
         PhysicsGrade: 50,
@@ -6,35 +6,35 @@ const SampleGradeInfo = [{
     },
 
     {
-        Name: "John Isaac",
+        Name: "John Moses",
         PhysicsGrade: 60,
         ChemistryGrade: 80
     },
 
     {
-        Name: "Mark Pete",
+        Name: "Mark Peter",
         PhysicsGrade: 90,
         ChemistryGrade: 10,
     }
 ];
 
 // function to add sample data to the table when the page loads
-SampleGradeInfo.forEach(function(OnLoadGrade){
-    DisplayGradesToTable(OnLoadGrade);
-});
+SampleGradeInfo.forEach((OnLoadGrade) => DisplayGradesToTable(OnLoadGrade));
 
 
-// Function To Display 
-function DisplayGradesToTable(){
-    const TableBody = document.getElementById("table-body");
-    const TableRow = document.createElement("tr");
+
+
+function DisplayGradesToTable(data){
+    let TableBody = document.querySelector("#table-body");
+    let TableRow = document.createElement("tr");
+
     TableRow.innerHTML = `
-    
-    
-    `;
+            <td>#</td>
+            <td scope="col" class="text-center">${data.Name}</td>
+            <td scope="col" class="text-center">${data.PhysicsGrade}</td>
+            <td scope="col" class="text-center">${data.ChemistryGrade}</td>
+            
+        `;
+    TableBody.appendChild(TableRow);
 }
 
-// function that actually ADDs and Displays the Sample Data
-function HandleOnLoadGrade(){
-    document.addEventListener("DOMContentLoaded",DisplayInitialGrades);
-}
