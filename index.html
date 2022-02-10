@@ -12,56 +12,58 @@
             <a href="#StudentFirst" class="navbar-brand " style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 25px; font-weight: bold;">STUDENT <span class="text-info">FIRST</span></a>
         </div>
     </nav>
-
-    <!-- APP TITLE -->
-    <div class="container mt-3 d-flex mx-auto justify-content-center">
-        <h2 class="display-6 mb-4">GRADE <span class="text-danger">TRACKER</span></h2>
-    </div>
-
-    <div class="container w-100 d-lg-flex " >
-        
-        <div class="col border border-2 mb-5 px-4 py-4 mx-2  ">
-            <form class="">
-                <div class="mb-3">
-                  <label for="first-name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="firstname">
-                </div>
-            
-
-                <div class="mb-3">
-                  <label for="physics" class="form-label">Physics Grade</label>
-                  <input type="number" class="form-control" id="physics">
-                </div>
-
-                <div class="mb-3">
-                  <label for="chemistry" class="form-label">Chemistry Grade</label>
-                  <input type="number" class="form-control" id="chemistry">
-                </div>
-        
-
-                <button type="submit" class="d-grid w-100 btn btn-primary" id="btn">Submit Info</button>
-              </form>
+   
+    <div class="main">
+        <div class="container mt-3 d-flex mx-auto justify-content-center" id="container">
+            <h2 class="display-6 mb-4">GRADE <span class="text-danger" id="title">TRACKER</span></h2>
         </div>
-
-
-        <div class="col border border-2 mb-5 p-3 mx-2 ">
-            <div class="recordStorage">
-                <h4 class="text-center mb-3 ">RECORD <span class="text-danger">STORAGE</span></h4>
+        
+        <div id="use"></div>
+        <div class="container w-100 d-lg-flex " id="section" >
+            
+            <div class="col border border-2 mb-5 px-4 py-4 mx-2  ">
+                <form class="">
+                    <div class="mb-3">
+                      <label for="first-name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="fullname">
+                    </div>
+                
+    
+                    <div class="mb-3">
+                      <label for="physics" class="form-label">Physics Grade</label>
+                      <input type="number" class="form-control" id="physics">
+                    </div>
+    
+                    <div class="mb-3">
+                      <label for="chemistry" class="form-label">Chemistry Grade</label>
+                      <input type="number" class="form-control" id="chemistry">
+                    </div>
+            
+    
+                    <button type="submit" class="d-grid w-100 btn btn-primary" id="btn">Submit Info</button>
+                  </form>
             </div>
     
-
-            <table class="table table-bordered table-hover justify-content-center" id="table-grade">
-                <thead>
-                  <tr >
-                    <th scope="col" class="text-center">Name</th>
-                    <th scope="col" class="text-center">Physics</th>
-                    <th scope="col" class="text-center ">chemistry</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody id="table-body">
-
-                </tbody>
+    
+            <div class="col border border-2 mb-5 p-3 mx-2 ">
+                <div class="recordStorage">
+                    <h4 class="text-center mb-3 ">RECORD <span class="text-danger">STORAGE</span></h4>
+                </div>
+        
+    
+                <table class="table table-bordered table-hover justify-content-center" id="table-grade">
+                    <thead>
+                      <tr >
+                        <th scope="col" class="text-center">Name</th>
+                        <th scope="col" class="text-center">Physics</th>
+                        <th scope="col" class="text-center ">chemistry</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-body">
+    
+                    </tbody>
+            </div>
         </div>
     </div>
     
