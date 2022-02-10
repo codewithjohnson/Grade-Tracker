@@ -41,11 +41,11 @@ function NotifyAlert(notification, alertclass) {
 
     setTimeout(function () {
         document.querySelector(".alert").remove();
-    }, 2000);
+    }, 4000);
 }
 
 
-
+//  DELETE
 
 
 
