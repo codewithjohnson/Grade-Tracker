@@ -1,35 +1,3 @@
-const button = document.querySelector("#btn");
-button.addEventListener("click", (e) => {
-    // Prevent Default Button Behavior
-    e.preventDefault();
-    let NameInput = document.querySelector('#fullname').value;
-    let PhysicsInput = document.querySelector('#physics').value;
-    let ChemistryInput = document.querySelector('#chemistry').value;
-
-    // VALIDATION OF
-    if(NameInput === "" || PhysicsInput === "" || ChemistryInput === ""){
-        NotifyAlert("Please fill in the Fields","danger");
-    }else{
-        let TableBody = document.querySelector("#table-body");
-        let TableRow = document.createElement("tr");
-
-        TableRow.innerHTML = `
-            <td scope="col" class="text-center">${NameInput}</td>
-            <td scope="col" class="text-center">${PhysicsInput}</td>
-            <td scope="col" class="text-center">${ChemistryInput}</td>
-            <td scope="col" class="text-center text-decoration-none text-danger"><a href="#delete"><img src="./images/de.png" alt=""></a></td>
-        `;
-
-        TableBody.appendChild(TableRow);
-
-        //  NOTIFY THE USER
-        NotifyAlert("successfully added info","success");
-    }
-});
-
-
-
-
 function NotifyAlert(notification, alertclass) {
     let NotifyDiv = document.createElement('div');
     NotifyDiv.className = `alert mx-auto  text-center alert-${alertclass}`;
@@ -45,7 +13,34 @@ function NotifyAlert(notification, alertclass) {
 }
 
 
-//  DELETE
+document.querySelector("#btn").addEventListener("click", (e) => {
+    // Prevent Default Button Behavior
+    e.preventDefault();
+    let NameInput = document.querySelector('#fullname').value;
+    let PhysicsInput = document.querySelector('#physics').value;
+    let ChemistryInput = document.querySelector('#chemistry').value;
+
+    let TableBody = document.querySelector("#table-body");
+    let TableRow = document.createElement("tr");
+
+    TableRow.innerHTML = `
+        <td scope="col" class="text-center">${NameInput}</td>
+        <td scope="col" class="text-center">${PhysicsInput}</td>
+        <td scope="col" class="text-center">${ChemistryInput}</td>
+        <td scope="col" class="text-center text-decoration-none text-danger"><a href="#delete"><img src="./images/de.png" alt=""></a></td>
+    `;
+    // APPEND ROW TO TABLE
+    TableBody.appendChild(TableRow);
+
+    //  NOTIFY THE USER
+    // NotifyAlert("successfully added info","success");
+
+    // CLEAR INPUT VALUES
+    document.getElementById("fullname").value = "";
+    document.getElementById("physics").value = "";
+    document.getElementById("chemistry").value = "";
+});
+
 
 
 
