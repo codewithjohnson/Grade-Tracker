@@ -1,16 +1,18 @@
-function NotifyAlert(notification, alertclass) {
-    let NotifyDiv = document.createElement('div');
+function NotifyAlert(notification,alertclass){
+    const NotifyDiv = document.createElement('div');
     NotifyDiv.className = `alert mx-auto  text-center alert-${alertclass}`;
     NotifyDiv.style.width = `50%`;
     NotifyDiv.style.border = `None`;
     NotifyDiv.textContent = `${notification}`;
-    let use = document.getElementById("use");
-    use.replaceWith(NotifyDiv);
+    const section = document.getElementById('section');
+    const parentDiv = document.getElementById("section").parentNode;
+    parentDiv.insertBefore(NotifyDiv,section);
 
     setTimeout(function () {
         document.querySelector(".alert").remove();
-    }, 4000);
+    }, 3000);
 }
+
 
 
 document.querySelector("#btn").addEventListener("click", (e) => {
@@ -25,15 +27,15 @@ document.querySelector("#btn").addEventListener("click", (e) => {
 
     TableRow.innerHTML = `
         <td scope="col" class="text-center">${NameInput}</td>
-        <td scope="col" class="text-center">${PhysicsInput} %</td>
-        <td scope="col" class="text-center">${ChemistryInput} %</td>
+        <td scope="col" class="text-center">${PhysicsInput}%</td>
+        <td scope="col" class="text-center">${ChemistryInput}%</td>
         <td scope="col" class="text-center text-decoration-none text-danger"><a href="#delete"><img src="./images/de.png" alt=""></a></td>
     `;
     // APPEND ROW TO TABLE
     TableBody.appendChild(TableRow);
 
     //  NOTIFY THE USER
-    // NotifyAlert("successfully added info","success");
+    NotifyAlert("SUCESSFULLY ADDED","success");
 
     // CLEAR INPUT VALUES
     document.getElementById("fullname").value = "";
