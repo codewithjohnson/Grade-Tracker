@@ -42,15 +42,19 @@ function GradingSoftware(NameInput, PhysicsInput, ChemistryInput) {
         <td scope="col" class="text-center">${this.NameInput}</td>
         <td scope="col" class="text-center">${this.PhysicsInput}%</td>
         <td scope="col" class="text-center">${this.ChemistryInput}%</td>
-        <td scope="col" class="text-center delete text-decoration-none text-danger"><a href="#delete"><img src="./images/de.png" alt=""></a></td>
+        <td scope="col" class="text-center delete text-decoration-none text-danger"><img src="./images/de.png" class = "delete" alt=""></td>
         `;
         // APPEND ROW TO TABLE
         TableBody.appendChild(TableRow);
     };
 
-    // FUNCTION TO DELETE ENTRIES FRO
-
-
+    // FUNCTION TO DELETE ENTRIES FROM
+    this.Remove = function(e){
+        if(e.classList.contains("delete")){
+            e.parentElement.parentElement.remove();
+        }
+       
+    };
 
 }
 
@@ -85,7 +89,14 @@ document.querySelector("#btn").addEventListener('click',function(e){
     }
 });
 
-Body = document.getElementById("table-body");
-Del = document.getElementById("delete");
-console.log(Del);
+
+
+
+//  FUNCTION TO DELETE TABLE ENTRIES
+TableBody = document.getElementById("table-body");
+TableBody.addEventListener("click",(e) => {
+    const Del = new GradingSoftware();
+    Del.Remove(e.target);
+    
+});
 
