@@ -64,8 +64,6 @@ const SampleGrade = new GradingSoftware("Sample Name",50,75);
 SampleGrade.DisplaySampleGrade();
 
 
-
-
 document.querySelector("#btn").addEventListener('click',function(e){
     // Prevent Default Button Behavior
     e.preventDefault();
@@ -88,8 +86,6 @@ document.querySelector("#btn").addEventListener('click',function(e){
         HandleGrades.ClearInputValues();
     }
 });
-
-
 
 
 //  FUNCTION TO DELETE TABLE ENTRIES
